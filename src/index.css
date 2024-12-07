@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this in your global CSS or component-specific CSS file */
+
+/* Set up A4 size page */
+/* CSS for Page Breaks */
+@page {
+    size: A4;
+    margin: 20mm;
+  }
+  
+  .page {
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  
+  .page-container {
+    display: block;
+    margin: 0 auto; 
+    width: 794px; 
+    height: 1123px; 
+  }
+  
+  .page-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    overflow: hidden;
+  }
+  
+  /* Force page breaks for large sections like HouseUsage */
+  .house-usage-page {
+    page-break-before: always;
+    page-break-after: always;
+  }
+  
+  
+  
