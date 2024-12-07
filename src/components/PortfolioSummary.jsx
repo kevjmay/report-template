@@ -30,8 +30,8 @@ function PortfolioSummary() {
       </div>
       <hr className='border-t-1 border-purpleCustom my-2'/>
       <p className='text-sm mt-4'>
-        This document contains the overview of the total Electric and Gas usage to report date made
-        by your portfolio against the allowance outlined by us for the same period.
+        This document contains the total Electric and Gas usage overview made
+        by your portfolio against the total allowance outlined by us for the same period.
       </p>
     </div> 
   )
