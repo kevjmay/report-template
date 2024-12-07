@@ -3,9 +3,17 @@ import './App.css';
 import CSVSubmit from './components/CSVSubmit';
 import Modal from './components/Modal';
 import Report from './components/Report';
+import { useCsvData } from './components/useCsvData'; 
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { csv, loading, error} = useCsvData()
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error: {error}</p>
+
+  console.log(csv)
 
   return (
     <div className="flex justify-center items-center bg-gray-100 p-8">
@@ -23,7 +31,7 @@ function App() {
         </button>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <Report />
+        <Report csvData={csv} />
       </Modal>
     </div>
   );
