@@ -41,7 +41,7 @@ export function UsageGraph({ type }) {
         <XAxis type="number" hide />
         <Bar
           dataKey="value"
-          fill="rgba(113, 64, 196, 1)"
+          fill="#f87575"
           radius={4}
         >
           <LabelList

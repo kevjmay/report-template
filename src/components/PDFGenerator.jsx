@@ -153,7 +153,7 @@ const PDFGenerator = ({ reportRef }) => {
   return (
     <button 
       onClick={generatePDF} 
-      className="bg-purpleCustom hover:bg-purpleCustom/80 text-white font-bold py-2 px-4 rounded"
+      className="bg-redCustom hover:bg-redCustom/80 text-white font-bold py-2 px-4 rounded"
     >
       Export PDF
     </button>

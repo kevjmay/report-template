@@ -6,8 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Lato', 'sans-serif'],
+      },
       colors: {
-        purpleCustom: "#7140C4",
+        warnCustom: "#fb0000",
+        redCustom: "#f87575",
       },
     },
   },

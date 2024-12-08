@@ -12,7 +12,7 @@ function HouseUsage({ row }) {
   // Helper function to determine styles for the percentage value
   const getPercentageStyle = (percentage) => {
     return percentage > 0
-      ? 'text-red-500 font-bold' // Red and bold if above 0
+      ? 'text-warnCustom font-bold' // Red and bold if above 0
       : '';
   };
 
@@ -28,23 +28,23 @@ function HouseUsage({ row }) {
   const previousReadGas = Math.floor((Date.now() - gasReadingDate.getTime()) / (1000 * 60 * 60 * 24));
 
   return (
-      <div className="bg-white border border-purpleCustom w-full mt-2 rounded-xl">
+      <div className="bg-white border border-redCustom w-full mt-2 rounded-xl">
         {/* House Details Section */}
-        <div className='flex justify-between items-center bg-white text-purpleCustom m-3'>
-          <h2 className='text-md font-semibold'>{row.address}</h2>
-          <div className='text-right text-sm '>
+        <div className='flex justify-between items-center bg-white text-redCustom m-3'>
+          <h2 className='text-md font-semibold font-sans'>{row.address}</h2>
+          <div className='text-right text-sm font-sans'>
             <h3>{row.bedSize + ' Bedroom'}</h3>
             <h3>End Date: {row.endDate}</h3>
           </div>
         </div>
-        <hr className='border-t-1 border-purpleCustom mx-4' />
+        <hr className='border-t-1 border-redCustom mx-4' />
 
         {/* Electric Meter Section */}
         <div className="flex justify-end h-full">
           <ul className='grid grid-cols-2 w-1/3 p-3'>
-            <li className='text-purpleCustom text-sm ml-2'>Electric Meter ({row.serialElectric})</li>
+            <li className='text-redCustom text-sm ml-2 font-sans'>Electric Meter ({row.serialElectric})</li>
           </ul>
-          <ul className="grid grid-cols-7 gap-4 w-2/3 text-purpleCustom text-xs p-3">
+          <ul className="grid grid-cols-7 gap-4 w-2/3 text-redCustom text-xs p-3 font-sans">
             <li className="flex items-center text-center">{row.initialMeterReadingElectric}</li>
             <li className="flex items-center text-center">{row.latestMeterReadingElectric}</li>
             <li className="flex items-center text-center">{row.latestMeterReadingTypeElectric}</li>
@@ -56,14 +56,14 @@ function HouseUsage({ row }) {
             <li className="flex items-center text-center">{previousReadElectric}</li>
           </ul>
         </div>
-        <hr className='border-t-1 border-purpleCustom mx-6' />
+        <hr className='border-t-1 border-redCustom mx-6 font-sans' />
 
         {/* Gas Meter Section */}
         <div className="flex justify-end h-full">
           <ul className='grid grid-cols-2 w-1/3 p-3'>
-            <li className='text-purpleCustom text-sm ml-2'>Gas Meter ({row.serialGas})</li>
+            <li className='text-redCustom text-sm ml-2 font-sans'>Gas Meter ({row.serialGas})</li>
           </ul>
-          <ul className="grid grid-cols-7 gap-4 w-2/3 text-purpleCustom text-xs p-3">
+          <ul className="grid grid-cols-7 gap-4 w-2/3 text-redCustom text-xs p-3 font-sans">
             <li className="flex items-center text-center">{row.initialMeterReadingGas}</li>
             <li className="flex items-center text-center">{row.latestMeterReadingGas}</li>
             <li className="flex items-center text-center">{row.latestMeterReadingTypeGas}</li>

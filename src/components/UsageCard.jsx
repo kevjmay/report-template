@@ -18,7 +18,7 @@ function UsageCard({ type }) {
   const overusePercent = (((totalUsage / totalAllowance) * 100) - 100).toFixed(2);
 
   return (
-    <div className="bg-gray-50 p-2 rounded-xl shadow border border-purpleCustom text-sm">
+    <div className="bg-gray-50 p-2 rounded-xl shadow border border-redCustom text-sm">
       <div className="flex items-center">
         {type === 'Electric' ? (
           <svg
@@ -27,7 +27,7 @@ function UsageCard({ type }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="text-purpleCustom w-6 h-6"
+            className="text-redCustom w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -42,7 +42,7 @@ function UsageCard({ type }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="text-purpleCustom w-6 h-6"
+            className="text-redCustom w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -56,49 +56,49 @@ function UsageCard({ type }) {
             />
           </svg>
         )}
-        <h2 className="text-purpleCustom text-lg font-semibold pl-1">
+        <h2 className="text-redCustom text-lg font-semibold pl-1">
           {type} Usage
         </h2>
       </div>
-      <hr className="border-t-1 border-purpleCustom my-2" />
+      <hr className="border-t-1 border-redCustom my-2" />
       <ul className="space-y-2">
-        <li className="flex items-center justify-between border border-purpleCustom rounded-md">
-          <span className="text-purpleCustom font-medium px-4 py-2">
+        <li className="flex items-center justify-between border border-redCustom rounded-md">
+          <span className="text-redCustom font-medium px-4 py-2">
             Actual Usage (kWh)
           </span>
-          <span className="flex justify-center items-center w-36 h-12 bg-purpleCustom text-white px-6 py-2 rounded-r-md text-right">
+          <span className="flex justify-center items-center w-36 h-12 bg-redCustom text-white px-6 py-2 rounded-r-md text-right">
             {totalUsage}
           </span>
         </li>
-        <li className="flex items-center justify-between border border-purpleCustom rounded-md">
-          <span className="text-purpleCustom font-medium px-4 py-1">
+        <li className="flex items-center justify-between border border-redCustom rounded-md">
+          <span className="text-redCustom font-medium px-4 py-1">
             Allowance (kWh)
           </span>
-          <span className="flex justify-center items-center w-36 h-12 bg-purpleCustom text-white px-6 py-1 rounded-r-md text-right">
+          <span className="flex justify-center items-center w-36 h-12 bg-redCustom text-white px-6 py-1 rounded-r-md text-right">
             {totalAllowance}
           </span>
         </li>
-        <li className="flex items-center justify-between border border-purpleCustom rounded-md">
-          <span className="text-purpleCustom font-medium px-4 py-1">
+        <li className="flex items-center justify-between border border-redCustom rounded-md">
+          <span className="text-redCustom font-medium px-4 py-1">
             Overall Balance
           </span>
-          <span className="flex justify-center items-center w-36 h-12 bg-purpleCustom text-white px-6 py-1 rounded-r-md text-right">
+          <span className="flex justify-center items-center w-36 h-12 bg-redCustom text-white px-6 py-1 rounded-r-md text-right">
             {balance} kWh
           </span>
         </li>
-        <li className="flex items-center justify-between border border-purpleCustom rounded-md">
-          <span className="text-purpleCustom font-medium px-4 py-1">
+        <li className="flex items-center justify-between border border-redCustom rounded-md">
+          <span className="text-redCustom font-medium px-4 py-1">
             Debit/Credit
           </span>
-          <span className="flex justify-center items-center w-36 h-12 bg-purpleCustom text-white px-6 py-1 rounded-r-md text-right">
+          <span className="flex justify-center items-center w-36 h-12 bg-redCustom text-white px-6 py-1 rounded-r-md text-right">
             {debitCredit}
           </span>
         </li>
-        <li className="flex items-center justify-between border border-purpleCustom rounded-md">
-          <span className="text-purpleCustom font-medium px-4 py-1">
+        <li className="flex items-center justify-between border border-redCustom rounded-md">
+          <span className="text-redCustom font-medium px-4 py-1">
             % Balance
           </span>
-          <span className="flex justify-center items-center w-36 h-12 bg-purpleCustom text-white px-6 py-1 rounded-r-md text-right">
+          <span className="flex justify-center items-center w-36 h-12 bg-redCustom text-white px-6 py-1 rounded-r-md text-right">
             {overusePercent}%
           </span>
         </li>

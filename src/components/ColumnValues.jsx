@@ -10,10 +10,10 @@ const previousRead = 'Days Since Read'
 
 function ColumnValues() {
   return (
-    <div className="bg-purpleCustom w-full rounded-xl p-2">
+    <div className="bg-redCustom w-full rounded-xl p-2">
       <div className="flex justify-end h-full justify-center items-center">
-      <img className='w-60 h-auto' src="./src/assets/logo.png" alt="logo" />
-        <ul className="grid grid-cols-7 gap-4 w-2/3 text-xs text-white font-bold p-3">
+      <img className='w-20 h-auto' src="./src/assets/Bundlr.svg" alt="logo" />
+        <ul className="grid grid-cols-7 gap-4 w-2/3 text-xs text-white font-bold p-3 font-sans">
           <li className="flex items-center text-center">{initial}</li>
           <li className="flex items-center text-center">{latest}</li>
           <li className="flex items-center text-center">{status}</li>

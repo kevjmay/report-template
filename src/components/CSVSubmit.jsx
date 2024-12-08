@@ -22,8 +22,8 @@ function CSVSubmit() {
           onChange={handleFileUpload}
           className='block w-full text-sm text-slate-500
           file:mr-4 file:py-2 file:px-4 file:rounded-md
-          file:border-2 file:border-purpleCustom file:text-sm file:font-semibold
-          file:bg-purpleCustom file:text-white
+          file:border-2 file:border-redCustom file:text-sm file:font-semibold
+          file:bg-redCustom file:text-white
           hover:file:bg-purple-50'
         />
       </form>

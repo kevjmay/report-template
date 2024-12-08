@@ -23,9 +23,9 @@ function App() {
           onClick={() => setIsModalOpen(true)}
           className='w-auto text-sm
           mr-4 py-2 px-4 rounded-md
-          border-2 border-purpleCustom text-sm font-semibold
-          bg-purpleCustom text-white
-          hover:bg-purpleCustom appearance-none'
+          border-2 border-redCustom text-sm font-semibold
+          bg-redCustom text-white
+          hover:bg-redCustom appearance-none'
         >
           Preview Report
         </button>

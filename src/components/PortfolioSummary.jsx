@@ -20,16 +20,16 @@ function PortfolioSummary() {
   const agentName = csv[0].name
 
   return (
-    <div className='text-purpleCustom bg-white p-6 rounded-b-xl shadow-lg'>
+    <div className='text-redCustom bg-white p-6 rounded-b-xl shadow-lg'>
       <div className='flex justify-between p-2'>
-        <h1 className='text-3xl font-bold'>Portfolio Summary</h1>
+        <h1 className='text-3xl font-semibold font-sans'>Portfolio Summary</h1>
         <div className='text-right'>
-          <h2 className='text-2xl font-bold'>{agentName}</h2>
-          <h3 className='font-bold '>Download created: {formattedDate}</h3>
+          <h2 className='text-2xl font-semibold font-sans'>{agentName}</h2>
+          <h3 className='font-semibold font-sans'>Download created: {formattedDate}</h3>
         </div>
       </div>
-      <hr className='border-t-1 border-purpleCustom my-2'/>
-      <p className='text-sm mt-4'>
+      <hr className='border-t-1 border-redCustom my-2'/>
+      <p className='text-sm mt-4 font-sans'>
         This document contains the total Electric and Gas usage overview made
         by your portfolio against the total allowance outlined by us for the same period.
       </p>
