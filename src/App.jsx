@@ -3,7 +3,8 @@ import './App.css';
 import CSVSubmit from './components/CSVSubmit';
 import Modal from './components/Modal';
 import Report from './components/Report';
-import { useCsvData } from './components/useCsvData'; 
+import { useCsvData } from './components/useCsvData';
+import UploadPdf from './components/UploadPdf'; 
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,8 @@ function App() {
   console.log(csv)
 
   return (
-    <div className="flex justify-center items-center bg-gray-100 p-8">
+    <>
+      <div className="flex justify-center items-center bg-gray-100 p-8">
       <div className='flex justify-center items center border border-gray-300 h-30px rounded-lg p-4'>
         <CSVSubmit />
         <button
@@ -29,11 +31,15 @@ function App() {
         >
           Preview Report
         </button>
+        </div>
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <Report csvData={csv} />
+        </Modal>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <Report csvData={csv} />
-      </Modal>
-    </div>
+      <div className='flex justify-center items-center bg-gray-100 p-8'>
+        <UploadPdf />
+      </div>
+    </>
   );
 }
 
