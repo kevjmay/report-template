@@ -1,8 +1,20 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { createClient } from '@supabase/supabase-js';
+import { useCsvData } from './useCsvData';
+
+const url = import.meta.env.VITE_SUPABASE_URL
+const key = import.meta.env.VITE_SUPABASE_KEY
+const supabase = createClient(url, key)
+
+
 
 const PDFGenerator = ({ reportRef }) => {
+
+  const { csv } = useCsvData()
+  console.log(csv) 
+
   const generatePDF = async () => {
     if (!reportRef || !reportRef.current) {
       console.error('Report reference is not available');
@@ -143,8 +155,21 @@ const PDFGenerator = ({ reportRef }) => {
         finalContactHeight
       );
 
-      // Save the PDF
-      pdf.save('report.pdf');
+      // Save the PDF to Supabase
+      const pdfBlob = await pdf.output('blob');
+      const { error: uploadError } = await supabase.storage
+        .from('reportpdf')
+        .upload(`${csv[0].name}_report_${Date.now()}.pdf`, pdfBlob, {
+          cacheControl: '3600',
+          upsert: true,
+        });
+
+      if (uploadError) {
+        console.error('Error uploading PDF to Supabase:', uploadError);
+        return;
+      }
+
+      console.log('PDF uploaded to Supabase successfully!');
     } catch (error) {
       console.error('Error generating PDF:', error);
     }
