@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div className="flex justify-center items-center p-8">
-        <Login />
+      <Login />
       <div className='flex justify-center items center border border-redCustom bg-redCustom/25 h-30px rounded-lg p-4'>
         <CSVSubmit />
         <button

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { supabase } from '../services/supabaseClient'
-import { Login, fetchUser } from './Login'
 
 const DataFetcherDB = () => {
     const [data, setData] = useState([])
