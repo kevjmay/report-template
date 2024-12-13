@@ -8,4 +8,8 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 export const signInWithGitHub = async () => {
     const { error } = await supabase.auth.signInWithOAuth({provider: 'github'})
     if (error) console.error('Error logging in with GitHub:', error.message)
+    else {
+        console.log('User:', user)
+        console.log('Session:', session)
+    }
 }
