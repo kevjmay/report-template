@@ -4,6 +4,7 @@ import CSVSubmit from './components/CSVSubmit';
 import Modal from './components/Modal';
 import Report from './components/Report';
 import { useCsvData } from './components/useCsvData';
+import DataFetcherDB from './components/DataFetcherDB';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
           <Report csvData={csv} />
         </Modal>
+        <DataFetcherDB />
       </div>
     </>
   );
