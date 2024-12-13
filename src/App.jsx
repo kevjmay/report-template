@@ -5,6 +5,7 @@ import Modal from './components/Modal';
 import Report from './components/Report';
 import { useCsvData } from './components/useCsvData';
 import DataFetcherDB from './components/DataFetcherDB';
+import Login from './components/Login';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <div className="flex justify-center items-center p-8">
+        <Login />
       <div className='flex justify-center items center border border-redCustom bg-redCustom/25 h-30px rounded-lg p-4'>
         <CSVSubmit />
         <button
